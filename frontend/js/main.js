@@ -102,7 +102,7 @@ document
     };
 
     try {
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://portfolio-a7qc.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -160,7 +160,7 @@ async function sendMessage() {
 
   try {
     // Send request to backend
-    const res = await fetch("http://localhost:5000/chat", {
+    const res = await fetch("https://portfolio-a7qc.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userMsg }),
