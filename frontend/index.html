@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soumyadeep Paul || Jadavpur University || Web Developer</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ef4444", // red-500
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-black text-white dark:bg-white dark:text-black transition-all duration-300"
+  >
+    <!-- Toggle Button -->
+    <div class="fixed top-4 right-4 z-50">
+      <button
+        id="toggleTheme"
+        class="bg-red-600 text-white px-4 py-2 rounded-xl hover:bg-red-700 transition text-sm font-semibold dark:bg-black dark:text-red-500 border border-white dark:border-red-500"
+      >
+        Toggle Theme
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      class="text-center py-20 px-4 bg-gradient-to-b from-red-900 to-black dark:from-gray-200 dark:to-white"
+    >
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4" data-aos="fade-down">
+        Soumyadeep Paul
+      </h1>
+      <p
+        class="text-xl md:text-2xl text-red-300 mb-6 dark:text-red-600"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Web Developer | React & Tailwind Enthusiast
+      </p>
+      <div
+        class="flex justify-center gap-4"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <a
+          href="#contact"
+          class="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition"
+          >Let's Connect</a
+        >
+        <a
+          href="./public/resume.pdf"
+          download
+          class="border border-red-500 text-red-400 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white transition"
+          >Download CV</a
+        >
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src="./soumyadeep12.jpg"
+          alt="Soumyadeep Paul"
+          class="rounded-2xl w-full max-w-sm mx-auto shadow-lg"
+          data-aos="zoom-in"
+        />
+        <div data-aos="fade-left">
+          <h2 class="text-3xl font-semibold mb-4 text-red-500">About Me</h2>
+          <p class="text-gray-300 dark:text-gray-700 mb-3">
+            Hey, I’m Soumyadeep Paul — a passionate web developer and B.Tech
+            student at Jadavpur University. I love building modern, interactive
+            websites using HTML, CSS, JavaScript, React, and Node.js. I’m
+            currently working on full-stack projects like Thriftopia and an
+            AI-powered Resume Builder to sharpen my skills and prepare for
+            real-world challenges.
+          </p>
+          <p class="text-gray-300 dark:text-gray-700">
+            I also love UI/UX design and open-source projects in my free time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-red-950 dark:bg-gray-100">
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-3xl font-semibold text-center mb-12 text-red-400 dark:text-red-600"
+          data-aos="fade-up"
+          style="text-decoration: underline"
+        >
+          PROJECTS
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            data-aos="flip-left"
+          >
+            <h3 class="text-xl font-bold mb-2 text-red-500">Thriftopia</h3>
+            <p class="text-gray-300 dark:text-gray-700">
+              Vintage e-commerce with cart, buy now, React & Tailwind.Not yet
+              Finished
+            </p>
+          </div>
+          <div
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
+            <h3 class="text-xl font-bold mb-2 text-red-500">
+              Portfolio Website ( You are currently viewing it right now)
+            </h3>
+            <p class="text-gray-300 dark:text-gray-700">
+              My personal brand site built with HTML, CSS, JS, Tailwind.
+            </p>
+          </div>
+          <div
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            data-aos="flip-left"
+            data-aos-delay="200"
+          >
+            <h3 class="text-xl font-bold mb-2 text-red-500">
+              AI powered Resume builder
+            </h3>
+            <p class="text-gray-300 dark:text-gray-700">
+              A AI powered website which will allow users to generate resumes
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 max-w-6xl mx-auto">
+      <h2
+        class="text-3xl font-semibold text-center mb-12 text-red-400 dark:text-red-600"
+        data-aos="fade-up"
+        style="text-decoration: underline"
+      >
+        SKILLS
+      </h2>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-200 dark:text-gray-700"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">HTML5</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">CSS3</div>
+
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">JavaScript</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">React.js</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">
+          Tailwind CSS
+        </div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">
+          Git & GitHub
+        </div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">
+          Responsive Design
+        </div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">
+          UI/UX Basics
+        </div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">Node-js</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">Express-js</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">MongoDB</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">mySQL</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">C (Basics)</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">
+          python(Basics)
+        </div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">Java</div>
+        <div class="bg-red-900 py-6 rounded-xl dark:bg-red-200">Postman</div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-black dark:bg-white">
+      <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-6 text-red-400 dark:text-red-600">
+          Get In Touch
+        </h2>
+        <p class="text-gray-400 dark:text-gray-700 mb-6">
+          Have a project or just want to say hi or contact me? Go ahead!
+        </p>
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="space-y-4 text-left">
+          <!-- Name Field -->
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full p-3 rounded-xl bg-red-950 text-white placeholder-red-400 dark:bg-red-100 dark:text-black focus:outline-none"
+          />
+
+          <!-- Email Field -->
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="w-full p-3 rounded-xl bg-red-950 text-white placeholder-red-400 dark:bg-red-100 dark:text-black focus:outline-none"
+          />
+
+          <!-- Message Field -->
+          <textarea
+            rows="4"
+            name="message"
+            placeholder="Your Message"
+            required
+            class="w-full p-3 rounded-xl bg-red-950 text-white placeholder-red-400 dark:bg-red-100 dark:text-black focus:outline-none"
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition w-full"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-gray-500 border-t border-red-800 dark:border-red-300"
+    >
+      <div class="flex justify-center gap-6 mb-3">
+        <a href="mailto:soumyadeeppaul@example.com" title="Email"
+          ><i data-lucide="mail" class="w-5 h-5 hover:text-red-500"></i
+        ></a>
+        <a
+          href="https://github.com/Soumyadeep-tech"
+          target="_blank"
+          title="GitHub"
+          ><i data-lucide="github" class="w-5 h-5 hover:text-red-500"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/soumyadeep-paul2006/"
+          target="_blank"
+          title="LinkedIn"
+          ><i data-lucide="linkedin" class="w-5 h-5 hover:text-red-500"></i
+        ></a>
+      </div>
+      <p>&copy; 2025 Soumyadeep Paul. All rights reserved.</p>
+    </footer>
+    <section
+      id="terminal"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-out"
+      class="bg-black text-red-500 dark:bg-white dark:text-red-700 px-6 py-20 font-mono transition-all duration-300"
+    >
+      <div
+        class="max-w-4xl mx-auto border border-red-500 dark:border-red-400 p-6 rounded-xl shadow-xl"
+      >
+        <div id="terminalOutput" class="h-80 overflow-y-auto mb-4 space-y-1">
+          <div>> Welcome to Soumyadeep's Terminal</div>
+          <div>
+            > Type <span class="text-white dark:text-black">'help'</span> to get
+            started
+          </div>
+        </div>
+        <div class="flex">
+          <span class="mr-2 text-red-500 dark:text-red-700">&gt;</span>
+          <input
+            type="text"
+            id="terminalInput"
+            autofocus
+            class="bg-transparent w-full outline-none border-none text-red-500 dark:text-red-700 placeholder-red-600 dark:placeholder-red-400"
+            placeholder="Enter command..."
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </section>
+    <div
+      id="chatbot-offline"
+      class="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-2xl shadow-md max-w-md mx-auto my-8 text-center"
+    >
+      <h2 class="text-xl font-bold mb-2">🤖Chatbot Offline</h2>
+      <p class="text-sm">Sorry folks...currently I’m broke 😔</p>
+      <p class="mt-2 text-gray-600 italic">
+        Need some money for the ChatGPT API... Till then, I’ll just sit here ;)
+      </p>
+    </div>
+    <!-- AI Chatbot -->
+    <div
+      id="chatbot"
+      class="fixed bottom-6 right-6 w-80 bg-black dark:bg-white text-white dark:text-black border border-red-500 rounded-xl shadow-lg hidden flex-col"
+    >
+      <!-- Header -->
+      <div
+        class="bg-red-600 text-white px-4 py-2 rounded-t-xl flex justify-between items-center"
+      >
+        <span class="font-semibold">AI Chatbot</span>
+        <button id="closeChat" class="text-white hover:text-gray-200">✖</button>
+      </div>
+
+      <!-- Messages -->
+      <div
+        id="chatMessages"
+        class="flex-1 p-3 overflow-y-auto space-y-2 text-sm max-h-60"
+      >
+        <div class="text-gray-400">🤖 Hi! Ask me anything...</div>
+      </div>
+
+      <!-- Input -->
+      <div class="p-2 border-t border-red-500 flex">
+        <input
+          id="chatInput"
+          type="text"
+          placeholder="Type a message..."
+          class="flex-1 p-2 rounded-l bg-red-950 dark:bg-red-100 dark:text-black focus:outline-none placeholder-red-400"
+        />
+        <button
+          id="sendChat"
+          class="bg-red-600 px-3 rounded-r text-white hover:bg-red-700"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Button -->
+    <button
+      id="openChat"
+      class="fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700"
+    >
+      💬
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Link to External JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
