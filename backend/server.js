@@ -10,7 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+    origin: [
+      "http://127.0.0.1:5500", // local dev
+      "http://localhost:3000", // local React dev (if you ever use it)
+      process.env.FRONTEND_URL, // your deployed frontend (set in Render/Vercel env)
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
@@ -19,6 +23,11 @@ app.use(
 // OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
+});
+
+// Test Route
+app.get("/", (req, res) => {
+  res.send("✅ Backend is live and working!");
 });
 
 // =================== CONTACT FORM ===================
@@ -79,7 +88,7 @@ app.post("/chat", async (req, res) => {
 });
 
 // =================== START SERVER ===================
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // ✅ Use Render's assigned port
 app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
+  console.log(`🚀 Server running on http://localhost:${PORT}`)
 );
