@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <!-- tsparticles library -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,8 +67,18 @@
 
     <!-- Hero Section -->
     <section
-      class="text-center py-20 px-4 bg-gradient-to-b from-red-900 to-black dark:from-gray-200 dark:to-white"
+      class="relative text-center py-28 px-4 bg-gradient-to-b from-red-900 to-black dark:from-gray-200 dark:to-white overflow-hidden"
     >
+      <!-- Animated floating circles background -->
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="w-72 h-72 bg-red-500 rounded-full blur-3xl opacity-20 absolute top-10 left-10 animate-pulse"
+        ></div>
+        <div
+          class="w-72 h-72 bg-yellow-500 rounded-full blur-3xl opacity-20 absolute bottom-10 right-10 animate-pulse"
+        ></div>
+      </div>
+
       <h1 class="text-5xl md:text-6xl font-extrabold mb-4" data-aos="fade-down">
         Soumyadeep Paul
       </h1>
@@ -75,8 +87,12 @@
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        Web Developer | React & Tailwind Enthusiast
+        Web Developer
+        <span class="text-yellow-400"
+          >{Tailwind · React · Node.js · Firebase}</span
+        >
       </p>
+
       <div
         class="flex justify-center gap-4"
         data-aos="fade-up"
@@ -84,15 +100,25 @@
       >
         <a
           href="#contact"
-          class="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition"
-          >Let's Connect</a
+          class="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 hover:scale-105 transition-transform"
         >
+          Let's Connect
+        </a>
         <a
           href="./public/resume.pdf"
           download
-          class="border border-red-500 text-red-400 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white transition"
-          >Download CV</a
+          class="border border-red-500 text-red-400 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white hover:scale-105 transition-transform"
         >
+          Download CV
+        </a>
+      </div>
+
+      <!-- Scroll down indicator -->
+      <div
+        class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce cursor-pointer"
+        onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})"
+      >
+        ↓
       </div>
     </section>
 
@@ -172,6 +198,7 @@
     </section>
 
     <!-- Skills Section -->
+    <!-- Skills Section -->
     <section id="skills" class="py-20 px-6 max-w-6xl mx-auto">
       <h2
         class="text-3xl font-semibold text-center mb-12 text-red-400 dark:text-red-600"
@@ -181,9 +208,6 @@
         SKILLS
       </h2>
 
-      <!-- Add Devicon CDN in your HTML head -->
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> -->
-
       <div
         class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-200 dark:text-gray-700"
         data-aos="fade-up"
@@ -192,113 +216,98 @@
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-html5-plain colored text-5xl"></i>
-          <span class="mt-2">HTML5</span>
+          <i class="devicon-html5-plain text-5xl mb-2"></i>
+          HTML5
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-css3-plain colored text-5xl"></i>
-          <span class="mt-2">CSS3</span>
+          <i class="devicon-css3-plain text-5xl mb-2"></i>
+          CSS3
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-javascript-plain colored text-5xl"></i>
-          <span class="mt-2">JavaScript</span>
+          <i class="devicon-javascript-plain text-5xl mb-2"></i>
+          JavaScript
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-react-original colored text-5xl"></i>
-          <span class="mt-2">React.js</span>
+          <i class="devicon-react-original text-5xl mb-2"></i>
+          React.js
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-tailwindcss-plain colored text-5xl"></i>
-          <span class="mt-2">Tailwind CSS</span>
+          <i class="devicon-tailwindcss-original-wordmark text-5xl mb-2"></i>
+          Tailwind CSS
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-git-plain colored text-5xl"></i>
-          <span class="mt-2">Git & GitHub</span>
+          <i class="devicon-git-plain text-5xl mb-2"></i>
+          Git & GitHub
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-responsive-plain colored text-5xl"></i>
-          <span class="mt-2">Responsive Design</span>
+          <i class="devicon-firebase-plain text-5xl mb-2"></i>
+          Firebase
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-figma-plain colored text-5xl"></i>
-          <span class="mt-2">UI/UX Basics</span>
+          <i class="devicon-figma-plain text-5xl mb-2"></i>
+          UI/UX Basics
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-nodejs-plain colored text-5xl"></i>
-          <span class="mt-2">Node.js</span>
+          <i class="devicon-nodejs-plain text-5xl mb-2"></i>
+          Node.js
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-express-original colored text-5xl"></i>
-          <span class="mt-2">Express.js</span>
+          <i class="devicon-express-original text-5xl mb-2"></i>
+          Express.js
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-mongodb-plain colored text-5xl"></i>
-          <span class="mt-2">MongoDB</span>
+          <i class="devicon-mongodb-plain text-5xl mb-2"></i>
+          MongoDB
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-mysql-plain colored text-5xl"></i>
-          <span class="mt-2">MySQL</span>
+          <i class="devicon-mysql-plain text-5xl mb-2"></i>
+          MySQL
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-c-plain colored text-5xl"></i>
-          <span class="mt-2">C (Basics)</span>
+          <i class="devicon-c-plain text-5xl mb-2"></i>
+          C (Basics)
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-python-plain colored text-5xl"></i>
-          <span class="mt-2">Python (Basics)</span>
+          <i class="devicon-python-plain text-5xl mb-2"></i>
+          Python (Basics)
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-java-plain colored text-5xl"></i>
-          <span class="mt-2">Java</span>
+          <i class="devicon-java-plain text-5xl mb-2"></i>
+          Java
         </div>
-
         <div
           class="bg-red-900 py-6 rounded-xl dark:bg-red-200 flex flex-col items-center"
         >
-          <i class="devicon-postman-plain colored text-5xl"></i>
-          <span class="mt-2">Postman</span>
+          <i class="devicon-postman-plain text-5xl mb-2"></i>
+          Postman
         </div>
       </div>
     </section>
