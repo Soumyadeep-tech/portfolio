@@ -238,7 +238,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
       <div class="grid shine-effect md:grid-cols-2 gap-10 items-center">
-        <div class="rotating-ring absolute w-64 h-64"></div>
+        <div class="float rotating-ring absolute w-64 h-64"></div>
         <img
           src="./soumyadeep12.jpg"
           alt="Soumyadeep Paul"
@@ -264,54 +264,126 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-red-950 dark:bg-gray-100">
-      <div class="max-w-6xl mx-auto">
+    <section
+      id="projects"
+      class="relative py-20 px-6 bg-red-950 dark:bg-gray-100 overflow-hidden"
+    >
+      <!-- Floating premium triangles background -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="triangle-premium absolute top-10 left-10 w-8 h-8 rotate-45 animate-float"
+        ></div>
+        <div
+          class="triangle-premium absolute top-1/3 right-16 w-6 h-6 rotate-45 animate-float-slow"
+        ></div>
+        <div
+          class="triangle-premium absolute bottom-10 left-1/4 w-10 h-10 rotate-45 animate-float-reverse"
+        ></div>
+        <div
+          class="triangle-premium absolute bottom-1/3 right-1/4 w-7 h-7 rotate-45 animate-float"
+        ></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
         <h2
           class="text-3xl font-semibold text-center mb-12 text-red-400 dark:text-red-600"
           data-aos="fade-up"
         >
           PROJECTS
         </h2>
+
         <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
           <div
-            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow-lg hover:shadow-red-500/70 hover:-translate-y-2 transition-all duration-300"
             data-aos="flip-left"
           >
             <h3 class="text-xl font-bold mb-2 text-red-500">SkillsPan</h3>
             <p class="text-gray-300 dark:text-gray-700">
-              A very big project of mine it will take quite few more months to
-              finish this .A website which will use AI to analyze users resume
-              and suggest what skills to learn and a whole lot of features
-              upcoming.
+              A large-scale project in progress — an AI-powered platform that
+              analyzes resumes, suggests relevant skills, and offers numerous
+              upcoming features.
             </p>
           </div>
+
+          <!-- Card 2 -->
           <div
-            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow-lg hover:shadow-red-500/70 hover:-translate-y-2 transition-all duration-300"
             data-aos="flip-left"
             data-aos-delay="100"
           >
             <h3 class="text-xl font-bold mb-2 text-red-500">
-              Portfolio Website ( You are currently viewing it right now)
+              Portfolio Website (You’re viewing it now)
             </h3>
             <p class="text-gray-300 dark:text-gray-700">
-              My personal brand site built with HTML,JS, Tailwind and backend
-              integrated .
+              My personal branding site built using HTML, Tailwind CSS, and
+              JavaScript, with backend integration.
             </p>
           </div>
+
+          <!-- Card 3 -->
           <div
-            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow"
+            class="bg-black border border-red-700 dark:bg-white dark:border-red-300 rounded-xl p-6 shadow-lg hover:shadow-red-500/70 hover:-translate-y-2 transition-all duration-300"
             data-aos="flip-left"
             data-aos-delay="200"
           >
             <h3 class="text-xl font-bold mb-2 text-red-500">
-              AI powered Resume builder
+              AI-powered Resume Builder
             </h3>
             <p class="text-gray-300 dark:text-gray-700">
-              A AI powered website which will allow users to generate resumes
+              A smart platform enabling users to instantly generate professional
+              resumes with the help of AI.
             </p>
           </div>
         </div>
       </div>
+
+      <!-- Triangle styling -->
+      <style>
+        .triangle-premium {
+          background: linear-gradient(135deg, #ff4d6d, #ff8c42, #ff0055);
+          filter: drop-shadow(0 0 8px rgba(255, 84, 104, 0.8));
+        }
+
+        /* Floating animations */
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0) rotate(45deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(45deg);
+          }
+        }
+        @keyframes float-slow {
+          0%,
+          100% {
+            transform: translateY(0) rotate(45deg);
+          }
+          50% {
+            transform: translateY(-6px) rotate(45deg);
+          }
+        }
+        @keyframes float-reverse {
+          0%,
+          100% {
+            transform: translateY(0) rotate(45deg);
+          }
+          50% {
+            transform: translateY(8px) rotate(45deg);
+          }
+        }
+
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+        .animate-float-slow {
+          animation: float-slow 6s ease-in-out infinite;
+        }
+        .animate-float-reverse {
+          animation: float-reverse 5s ease-in-out infinite;
+        }
+      </style>
     </section>
 
     <!-- Skills Section -->
