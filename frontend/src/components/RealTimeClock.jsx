@@ -16,7 +16,7 @@ const RealTimeClock = () => {
       hour12: true,
       hour: "2-digit",
       minute: "2-digit",
-      second: "2-digit",
+      //second: "2-digit",
     });
   };
 
@@ -30,7 +30,11 @@ const RealTimeClock = () => {
   };
 
   return (
-    <div className="fixed top-20 right-4 z-40 bg-black/80 dark:bg-white/80 backdrop-blur-sm border border-red-500 dark:border-red-400 rounded-xl p-4 text-center min-w-[200px]">
+    <div
+      className="fixed top-20 right-2 sm:right-4 z-40 bg-black/80 dark:bg-white/80 
+                backdrop-blur-sm border border-red-500 dark:border-red-400 
+                rounded-xl p-3 sm:p-4 text-center min-w-[160px] sm:min-w-[200px]"
+    >
       <div className="text-red-400 dark:text-red-600 font-mono text-2xl font-bold">
         {formatTime(time)}
       </div>
