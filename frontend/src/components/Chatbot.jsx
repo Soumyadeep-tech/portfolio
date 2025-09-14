@@ -46,7 +46,7 @@ const Chatbot = () => {
     <>
       {/* Chatbot */}
       {isOpen ? (
-        <div className="fixed bottom-2 right-2 sm:bottom-6 sm:right-6 w-[calc(100vw-16px)] sm:w-80 max-w-[380px] bg-black dark:bg-white text-white dark:text-black border border-red-500 rounded-xl shadow-lg flex flex-col z-50">
+        <div className="fixed bottom-16 right-1 sm:bottom-6 sm:right-6 w-[calc(100vw-8px)] sm:w-80 max-w-[320px] sm:max-w-[380px] bg-black dark:bg-white text-white dark:text-black border border-red-500 rounded-xl shadow-lg flex flex-col z-50">
           {/* Header */}
           <div className="bg-red-600 text-white px-4 py-2 rounded-t-xl flex justify-between items-center">
             <span className="font-semibold">AI Chatbot</span>
@@ -95,7 +95,9 @@ const Chatbot = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-2 right-2 sm:bottom-6 sm:right-6 bg-red-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-red-700 z-50 text-sm sm:text-base"
+          className="fixed bottom-4 right-1 sm:bottom-6 sm:right-6 bg-red-600 text-white 
+                   p-2.5 sm:p-4 rounded-full shadow-lg hover:bg-red-700 z-50 
+                   text-sm sm:text-base w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center"
         >
           💬
         </button>
