@@ -31,17 +31,17 @@ const RealTimeClock = () => {
 
   return (
     <div
-      className="fixed top-20 right-2 sm:right-4 z-40 bg-black/80 dark:bg-white/80 
+      className="fixed top-16 sm:top-20 right-1 sm:right-4 z-40 bg-black/80 dark:bg-white/80 
                 backdrop-blur-sm border border-red-500 dark:border-red-400 
-                rounded-xl p-3 sm:p-4 text-center min-w-[160px] sm:min-w-[200px]"
+                rounded-xl p-2 sm:p-4 text-center w-[140px] sm:min-w-[200px] max-w-[calc(100vw-8px)]"
     >
-      <div className="text-red-400 dark:text-red-600 font-mono text-2xl font-bold">
+      <div className="text-red-400 dark:text-red-600 font-mono text-lg sm:text-2xl font-bold">
         {formatTime(time)}
       </div>
-      <div className="text-gray-300 dark:text-gray-700 text-sm mt-1">
+      <div className="text-gray-300 dark:text-gray-700 text-xs sm:text-sm mt-1 leading-tight">
         {formatDate(time)}
       </div>
-      <div className="text-xs text-gray-500 dark:text-gray-500 mt-2">
+      <div className="text-xs text-gray-500 dark:text-gray-500 mt-1 sm:mt-2">
         Live Clock
       </div>
     </div>
