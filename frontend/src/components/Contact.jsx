@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_ENDPOINTS } from "../config/api";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://portfolio-a7qc.onrender.com/contact", {
+      const res = await fetch(API_ENDPOINTS.contact, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

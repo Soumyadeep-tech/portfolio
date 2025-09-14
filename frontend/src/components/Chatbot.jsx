@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { API_ENDPOINTS } from "../config/api";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Chatbot = () => {
     setInput("");
 
     try {
-      const res = await fetch("https://portfolio-a7qc.onrender.com/chat", {
+      const res = await fetch(API_ENDPOINTS.chat, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg }),

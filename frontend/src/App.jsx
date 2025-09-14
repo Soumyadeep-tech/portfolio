@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import ThemeToggle from "./components/ThemeToggle";
 import RealTimeClock from "./components/RealTimeClock";
 import ParticleBackground from "./components/ParticleBackground";
+import DebugPanel from "./components/DebugPanel";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./index.css";
@@ -36,6 +37,7 @@ function App() {
         <ParticleBackground />
         <ThemeToggle toggleTheme={toggleTheme} />
         <RealTimeClock />
+        <DebugPanel />
         <Hero />
         <About />
         <Projects />
