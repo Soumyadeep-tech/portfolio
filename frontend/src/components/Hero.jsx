@@ -1,4 +1,5 @@
 import TypingAnimation from "./TypingAnimation";
+import { Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -46,22 +47,40 @@ const Hero = () => {
       </p>
 
       <div
-        className="flex justify-center gap-4"
+        className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-2xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="400"
       >
         <a
           href="#contact"
-          className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 hover:scale-105 transition-transform"
+          className="bg-red-500 text-white px-4 sm:px-6 py-3 rounded-xl font-semibold hover:bg-red-600 hover:scale-105 transition-transform text-sm sm:text-base"
         >
           Let's Connect
         </a>
         <a
           href="/resume.pdf"
           download
-          className="border border-red-500 text-red-400 px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white hover:scale-105 transition-transform"
+          className="border border-red-500 text-red-400 px-4 sm:px-6 py-3 rounded-xl hover:bg-red-600 hover:text-white hover:scale-105 transition-transform text-sm sm:text-base"
         >
           Download CV
+        </a>
+        <a
+          href="https://www.linkedin.com/in/soumyadeep-paul2006/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-600 text-white px-4 sm:px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 hover:scale-105 transition-transform flex items-center gap-2 text-sm sm:text-base"
+        >
+          <Linkedin className="w-4 h-4" />
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/Soumyadeep-tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-800 text-white px-4 sm:px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 hover:scale-105 transition-transform flex items-center gap-2 text-sm sm:text-base dark:bg-gray-600 dark:hover:bg-gray-500"
+        >
+          <Github className="w-4 h-4" />
+          GitHub
         </a>
       </div>
 
